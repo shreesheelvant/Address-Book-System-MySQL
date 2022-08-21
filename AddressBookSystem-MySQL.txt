@@ -18,3 +18,34 @@ mysql> show databases;
 | sys                  |
 +----------------------+
 7 rows in set (3.33 sec)
+
+
+
+
+mysql> use address_book_service;
+Database changed
+mysql> create table address_book
+    -> (FirstName varchar(20) not null,
+    -> LastName varchar(20) not null,
+    -> Address varchar(100) not null,
+    -> City varchar(30) not null,
+    -> State varchar(30) not null,
+    -> Email varchar(30) not null,
+    -> ZipCode int not null,
+    -> PhoneNumber int not null);
+Query OK, 0 rows affected (3.27 sec)
+
+mysql> describe address_book;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| FirstName   | varchar(20)  | NO   |     | NULL    |       |
+| LastName    | varchar(20)  | NO   |     | NULL    |       |
+| Address     | varchar(100) | NO   |     | NULL    |       |
+| City        | varchar(30)  | NO   |     | NULL    |       |
+| State       | varchar(30)  | NO   |     | NULL    |       |
+| Email       | varchar(30)  | NO   |     | NULL    |       |
+| ZipCode     | int          | NO   |     | NULL    |       |
+| PhoneNumber | int          | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+8 rows in set (1.72 sec)
