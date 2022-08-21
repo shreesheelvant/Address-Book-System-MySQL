@@ -70,3 +70,20 @@ mysql> select * from address_book;
 | Aishwarya   | Sheelvant | Nagar       | Mysore   | Karnataka | basava@gmail.com |   52410 |        6954 |
 +-------------+-----------+-------------+----------+-----------+------------------+---------+-------------+
 2 rows in set (0.07 sec)
+
+--------------------------------------------------
+UC4 -> Edit existing Contact with using their name
+--------------------------------------------------
+
+mysql> update address_book set Address = 'Nagar' where FirstName = 'Aishwarya';
+Query OK, 0 rows affected (0.15 sec)
+Rows matched: 1  Changed: 0  Warnings: 0
+
+mysql> select * from address_Book;
++-------------+-----------+-------------+----------+-----------+------------------+---------+-------------+
+| FirstName   | LastName  | Address     | City     | State     | Email            | ZipCode | PhoneNumber |
++-------------+-----------+-------------+----------+-----------+------------------+---------+-------------+
+| Bhagyashree | Suntana   | QuadriChowk | Gulbarga | Karnataka | bhagya@gmail.com |   52101 |        2365 |
+| Aishwarya   | Sheelvant | Nagar       | Mysore   | Karnataka | basava@gmail.com |   52410 |        6954 |
++-------------+-----------+-------------+----------+-----------+------------------+---------+-------------+
+2 rows in set (0.00 sec)
