@@ -87,3 +87,27 @@ mysql> select * from address_Book;
 | Aishwarya   | Sheelvant | Nagar       | Mysore   | Karnataka | basava@gmail.com |   52410 |        6954 |
 +-------------+-----------+-------------+----------+-----------+------------------+---------+-------------+
 2 rows in set (0.00 sec)
+
+-----------------------------------------------------
+UC5 -> Deleted existing Contact with using their name
+-----------------------------------------------------
+
+mysql> select * from address_book;
++-------------+-----------+-------------+----------+-----------+------------------+---------+-------------+
+| FirstName   | LastName  | Address     | City     | State     | Email            | ZipCode | PhoneNumber |
++-------------+-----------+-------------+----------+-----------+------------------+---------+-------------+
+| Bhagyashree | Suntana   | QuadriChowk | Gulbarga | Karnataka | bhagya@gmail.com |   52101 |        2365 |
+| Aishwarya   | Sheelvant | Nagar       | Mysore   | Karnataka | basava@gmail.com |   52410 |        6954 |
++-------------+-----------+-------------+----------+-----------+------------------+---------+-------------+
+2 rows in set (0.00 sec)
+
+mysql> delete from address_book where FirstName = 'Bhagyashree';
+Query OK, 1 row affected (0.17 sec)
+
+mysql> select *from address_book;
++-----------+-----------+---------+--------+-----------+------------------+---------+-------------+
+| FirstName | LastName  | Address | City   | State     | Email            | ZipCode | PhoneNumber |
++-----------+-----------+---------+--------+-----------+------------------+---------+-------------+
+| Aishwarya | Sheelvant | Nagar   | Mysore | Karnataka | basava@gmail.com |   52410 |        6954 |
++-----------+-----------+---------+--------+-----------+------------------+---------+-------------+
+1 row in set (0.00 sec)
