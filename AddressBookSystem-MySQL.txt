@@ -49,3 +49,24 @@ mysql> describe address_book;
 | PhoneNumber | int          | NO   |     | NULL    |       |
 +-------------+--------------+------+-----+---------+-------+
 8 rows in set (1.72 sec)
+
+
+--------------------------------------
+UC3 -> Inserting Values into a Table
+--------------------------------------
+
+
+mysql> insert into address_book(FirstName,LastName,Address,City,State,Email,ZipCode,PhoneNumber)values
+    -> ('Bhagyashree','Suntana','QuadriChowk','Gulbarga','Karnataka','bhagya@gmail.com',52101,2365),
+    -> ('Aishwarya','Sheelvant','Nagar','Mysore','Karnataka','basava@gmail.com',52410,6954);
+Query OK, 2 rows affected (0.48 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from address_book;
++-------------+-----------+-------------+----------+-----------+------------------+---------+-------------+
+| FirstName   | LastName  | Address     | City     | State     | Email            | ZipCode | PhoneNumber |
++-------------+-----------+-------------+----------+-----------+------------------+---------+-------------+
+| Bhagyashree | Suntana   | QuadriChowk | Gulbarga | Karnataka | bhagya@gmail.com |   52101 |        2365 |
+| Aishwarya   | Sheelvant | Nagar       | Mysore   | Karnataka | basava@gmail.com |   52410 |        6954 |
++-------------+-----------+-------------+----------+-----------+------------------+---------+-------------+
+2 rows in set (0.07 sec)
